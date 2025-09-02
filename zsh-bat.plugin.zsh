@@ -4,8 +4,8 @@ if command -v batcat >/dev/null 2>&1; then
 
   # For Ubuntu and Debian-based `bat` packages
   # the `bat` program is named `batcat` on these systems
-  alias cat="batcat --plain --theme='GitHub Dark'"
-  export MANPAGER="sh -c 'col -bx | batcat --theme=\"GitHub Dark\" -l man -p'"
+  alias cat="batcat --plain"
+  export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
   export MANROFFOPT="-c"
 elif command -v bat >/dev/null 2>&1; then
   # Save the original system `cat` under `rcat`
@@ -13,7 +13,7 @@ elif command -v bat >/dev/null 2>&1; then
 
   # For all other systems
   alias cat="bat --plain --theme='GitHub Dark'"
-  export MANPAGER="sh -c 'col -bx | bat --theme=\"GitHub Dark\" -l man -p'"
+  export MANPAGER="sh -c 'col -bx | bat -l man -p'"
   export MANROFFOPT="-c"
 fi
 
