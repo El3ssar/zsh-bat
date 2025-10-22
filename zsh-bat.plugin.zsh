@@ -12,7 +12,7 @@ elif command -v bat >/dev/null 2>&1; then
   alias rcat="$(which cat)"
 
   # For all other systems
-  alias cat="bat --plain --theme='GitHub Dark'"
+  alias cat="bat --plain"
   export MANPAGER="sh -c 'col -bx | bat -l man -p'"
   export MANROFFOPT="-c"
 fi
